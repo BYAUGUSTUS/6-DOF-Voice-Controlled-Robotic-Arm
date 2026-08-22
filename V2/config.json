@@ -1,0 +1,34 @@
+{
+  "presets": {
+    "home": {
+      "base": 90,
+      "shoulder": 90,
+      "elbow": 90,
+      "wrist_rot": 90,
+      "wrist_tilt": 90,
+      "gripper": 90
+    },
+    "rest": {
+      "base": 90,
+      "shoulder": 120,
+      "elbow": 45,
+      "wrist_rot": 90,
+      "wrist_tilt": 90,
+      "gripper": 90
+    }
+  },
+  "calibration": {
+    "src_pixels": [
+      [100, 100],
+      [540, 100],
+      [540, 420],
+      [100, 420]
+    ],
+    "dst_world_mm": [
+      [-100, 250],
+      [100, 250],
+      [100, 120],
+      [-100, 120]
+    ]
+  }
+}

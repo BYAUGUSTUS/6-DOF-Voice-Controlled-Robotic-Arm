@@ -1,0 +1,38 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# C extensions & OS files
+*.so
+.DS_Store
+Thumbs.db
+
+# Virtual Environments
+venv/
+env/
+ENV/
+.venv/
+
+# Large Model Weights & Data
+models/vosk-model*
+models/*.pt
+models/*.onnx
+*.zip
+*.tar.gz
+
+# YOLO / Ultralytics artifacts
+runs/
+*.log
+
+# IDE & Editor configs
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Arduino / ESP32 Build Outputs
+*.hex
+*.bin
+*.elf
+build/
