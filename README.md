@@ -61,8 +61,8 @@ This model can be 3D printed and assembled for use with the Raspberry Pi-control
 
 1. **Clone the Repository**
     ```bash
-    git clone https://github.com/M4YH3M-DEV/6-DOF-Voice-Controlled-Robotic-Arm.git
-    cd 6-DOF-Voice-Controlled-Robotic-Arm
+    git clone https://github.com/BYAUGUSTUS/6-DOF-Voice-Controlled-Robotic-Arm.git
+    cd 6-DOF-Voice-Controlled-Robotic-Arm/V2
     ```
 
 2. **Install Dependencies**
@@ -72,10 +72,12 @@ This model can be 3D printed and assembled for use with the Raspberry Pi-control
     pip3 install -r requirements.txt
     ```
 
-3. **Download Vosk Model**
+3. **Download Vosk Model (if it is not already present in `V2/models/`)**
     ```bash
+    cd models
     wget https://alphacephei.com/vosk/models/vosk-model-small-en-us-0.15.zip
     unzip vosk-model-small-en-us-0.15.zip
+    cd ..
     ```
 
 4. **Run the Project**
@@ -102,17 +104,26 @@ This model can be 3D printed and assembled for use with the Raspberry Pi-control
 
 ## 📁 File Structure
 
+```text
 6-DOF-Voice-Controlled-Robotic-Arm/
+├── V1/
+│   ├── 6DOF-Robotic-Arm.py       # Original implementation
+│   └── requirements.txt
+├── V2/
+│   ├── config.json                # Preset storage
+│   ├── firmware/                  # Arm controller firmware
+│   ├── main.py                    # Current entry point
+│   ├── models/                    # Vosk and YOLO models
+│   ├── modules/                   # Voice, vision, parser, and arm modules
+│   ├── requirements.txt           # V2 Python dependencies
+│   ├── test_voice_pipeline.py     # Interactive voice pipeline check
+│   └── test_vision_pipeline.py    # Interactive vision pipeline check
+└── README.md
+```
 
-├── config.json                   # Preset storage
-
-├── vosk-model-small-en-us-0.15/ # Vosk voice recognition model
-
-├── main.py                      # Core logic and loop
-
-├── requirements.txt             # Python dependencies
-
-└── README.md                    # You're reading it!
+The V2 pipeline checks are available in
+[`V2/test_voice_pipeline.py`](V2/test_voice_pipeline.py) and
+[`V2/test_vision_pipeline.py`](V2/test_vision_pipeline.py).
 
 ---
 
